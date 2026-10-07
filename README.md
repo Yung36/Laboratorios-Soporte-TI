@@ -38,3 +38,25 @@ Si tras aplicar el desbloqueo exitoso en el servidor central de Active Directory
 * **Resolución Técnica en Office 365:** Para mitigar riesgos de suplantación de identidad y cumplir con el principio de *No Repudio*, queda estrictamente prohibido entregar credenciales del ex-empleado a terceros. 
 * **Acción:** Se accede al Centro de Administración de Exchange y se transforma el buzón a un **Buzón Compartido (Shared Mailbox)**. Posteriormente, se delegan permisos de `Acceso Completo (Full Access)` al supervisor mediante su propia identidad corporativa. El recurso se monta automáticamente en el cliente Outlook del jefe directo, garantizando la auditoría y la seguridad del proceso.
 
+
+## 📋 Laboratorio 3.3: Aprovisionamiento de Identidades desde Cero Absoluto
+**Objetivo:** Documentar el procedimiento técnico manual para la creación y configuración de un objeto de usuario en Active Directory sin depender de plantillas o clonación de perfiles, garantizando el cumplimiento de la estructura de red corporativa.
+
+### ⚙️ Procedimiento de Configuración Manual (Paso a Paso):
+
+1. **Aprovisionamiento Base (Capa de Identidad):**
+   * Creación del objeto de tipo `Usuario` dentro de la Unidad Organizativa (OU) del departamento correspondiente.
+   * Asignación del identificador único (`User Logon Name`) bajo la nomenclatura estándar de la organización (ej: `nombre.apellido`).
+   * Configuración de la contraseña temporal inicial con la directiva obligatoria de cambio forzado en el primer inicio de sesión del colaborador.
+
+2. **Mapeo de Almacenamiento (Pestaña Perfil):**
+   * Configuración manual de la **Carpeta de Inicio (Home Folder)** en la sección de propiedades del usuario.
+   * Conexión lógica de una unidad de red asignada (ej: Unidad `H:` o `Z:`).
+   * Implementación de la ruta UNC global del servidor de archivos de la organización para el aprovisionamiento automatizado del almacenamiento privado del usuario en la red local:
+     `\\servidor-archivos\usuarios\nombre.usuario`
+
+3. **Gobernanza de Accesos (Pestaña Miembro de):**
+   * Auditoría de los grupos de seguridad asignados por defecto (`Domain Users`).
+   * Inclusión manual y granular en los **Grupos de Seguridad (Security Groups)** del departamento correspondiente mediante el motor de búsqueda (ej: `GRP-Contabilidad-Lectura`, `GRP-VPN-Acceso`), aplicando el principio de *Menor Privilegio* para mitigar riesgos de seguridad.
+
+

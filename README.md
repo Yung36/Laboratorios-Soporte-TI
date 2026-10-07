@@ -22,8 +22,7 @@ Este módulo contiene la documentación técnica de mis prácticas de Mesa de Ay
 ## 📸 Evidencia del Laboratorio (Estructura de Base de Datos Local)
 A continuación se adjunta la captura de la ruta de almacenamiento oculto analizada, donde se aprecian los archivos de logs corporativos (`V01.log`) y el contenedor de base de datos indexada (`.dat`) manipulados para el descarte de corrupción de caché:
 
-![Evidencia de Base de Datos Local]
-
+Evidencia de Base de Datos Local
 <img width="634" height="345" alt="2026-10-06_20-01" src="https://github.com/user-attachments/assets/15a60aad-38ca-45d2-b4f1-97ad5a5423dd" />
 
 

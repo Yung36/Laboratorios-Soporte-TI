@@ -22,6 +22,11 @@ Ante una cola simultánea de solicitudes asignadas en el sistema de tickets (Jir
 * **Incidente:** Falla de impresión a color en periférico privado de Jefatura de Finanzas.
 * **Justificación de Soporte:** Urgencia mitigada debido a la existencia de un plan de continuidad funcional alterno (impresión compartida en blanco y negro vía LAN en pasillo). El flujo de trabajo del usuario no está detenido, permitiendo agendar la atención de forma programada dentro del turno diario.
 
+
+#### 🥉 3. Prioridad: BAJA / REQUERIMIENTO (SLA: 24 - 48 horas)
+* **Incidente:** Solicitud de aprovisionamiento de accesos (Onboarding en Active Directory) para colaborador de reingreso programado para la siguiente semana de operaciones.
+* **Justificación de Soporte:** No representa una degradación de servicio activa ni detención de funciones en tiempo real. Se gestiona bajo el flujo estándar de solicitudes de requerimiento de TI dentro de la ventana de tiempo contractual del SLA.
+
 # 🎫 Manual de Gestión de Incidentes y Operaciones de Mesa de Ayuda (ITIL Framework)
 Este módulo contiene la documentación técnica de mis laboratorios prácticos orientados a la administración de colas de trabajo, priorización de incidentes y cumplimiento de Acuerdos de Nivel de Servicio (SLA) utilizando la herramienta empresarial estándar de la industria: **Jira Service Management**.
 
@@ -66,9 +71,4 @@ Ticket Completado
 
 <img width="1268" height="558" alt="2026-10-07_16-34_1" src="https://github.com/user-attachments/assets/043a97cd-a0fe-4940-9cfb-b3d6c5af8247" />
 
-
-
-#### 🥉 3. Prioridad: BAJA / REQUERIMIENTO (SLA: 24 - 48 horas)
-* **Incidente:** Solicitud de aprovisionamiento de accesos (Onboarding en Active Directory) para colaborador de reingreso programado para la siguiente semana de operaciones.
-* **Justificación de Soporte:** No representa una degradación de servicio activa ni detención de funciones en tiempo real. Se gestiona bajo el flujo estándar de solicitudes de requerimiento de TI dentro de la ventana de tiempo contractual del SLA.
 

@@ -24,7 +24,6 @@ Verificación de la salida hacia el exterior (Internet) utilizando el DNS públi
 ## 📸 Evidencia del Laboratorio (CMD de Windows)
 A continuación se adjunta la captura de pantalla de las pruebas ejecutadas en la terminal de comandos de Windows 11:
 
-![Evidencia de comandos de red]
 <img width="520" height="448" alt="2026-10-05_16-44" src="https://github.com/user-attachments/assets/542bf304-47d4-474f-9efb-a3f9cc04f2a4" />
 
 

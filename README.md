@@ -15,3 +15,26 @@ Si tras aplicar el desbloqueo exitoso en el servidor central de Active Directory
 
 * **Escenario de Pérdida de Conectividad (Teletrabajo):** Si el colaborador se encuentra remoto, la máquina local retiene el estado de bloqueo en la caché debido a que la sesión no se ha iniciado y, por ende, el túnel **VPN** no se ha establecido. Al no haber comunicación en Capa 3 con los Controladores de Dominio (DC), la computadora no puede sincronizar el nuevo estado.
 * **Mitigación de Soporte:** Forzar el levantamiento del agente VPN de la empresa desde la pantalla de bloqueo de Windows utilizando las credenciales temporales, u obligar a una reconexión física a la red LAN corporativa para restablecer el canal seguro de comunicación de identidades.
+
+
+
+## 📋 Laboratorio 3.2: Gestión del Ciclo de Vida del Usuario (Onboarding & Offboarding)
+**Objetivo:** Documentar los procedimientos operativos estándar para el alta de nuevo personal y la baja segura de colaboradores, aplicando principios de ciberseguridad y continuidad del negocio.
+
+### ➕ Proceso de Alta de Personal (Onboarding)
+* **Escenario:** Recursos Humanos solicita la creación de accesos para un nuevo colaborador en un departamento existente.
+* **Procedimiento Operativo:** Para optimizar tiempos y garantizar la consistencia de permisos, se aplica la técnica de **Clonación de Perfil**. Se localiza a un usuario activo del mismo departamento, se selecciona la opción `Copiar (Copy)` en Active Directory y se introducen los datos de la nueva identidad (`Nombre`, `Apellido`, `User Logon Name`). Esto hereda de forma automática las membresías a grupos de seguridad y accesos a recursos compartidos en red correspondientes, eliminando el error humano.
+
+### ❌ Proceso de Baja de Personal (Offboarding) y Protocolo de Seguridad
+* **Escenario:** Desvinculación inmediata de un colaborador por motivos de seguridad o cese de funciones.
+* **Procedimiento Operativo:** 
+  1. **NUNCA eliminar el objeto de usuario** en Active Directory para evitar la pérdida de trazabilidad e historiales en el servidor de archivos.
+  2. Ejecutar de forma inmediata la directiva **`Deshabilitar cuenta (Disable Account)`**, cortando cualquier sesión activa en caliente.
+  3. Realizar un restablecimiento forzado de contraseña (Password Reset) asignando una clave compleja aleatoria y desconocida.
+  4. Mover el objeto de usuario a la Unidad Organizativa (OU) de seguridad destinada a `Ex-empleados / Cuentas Inactivas`.
+
+### 🛡️ Delegación Segura de Buzones Históricos (Gobernanza de Datos)
+* **Requerimiento:** El supervisor del departamento solicita acceso a la información histórica del correo del ex-empleado.
+* **Resolución Técnica en Office 365:** Para mitigar riesgos de suplantación de identidad y cumplir con el principio de *No Repudio*, queda estrictamente prohibido entregar credenciales del ex-empleado a terceros. 
+* **Acción:** Se accede al Centro de Administración de Exchange y se transforma el buzón a un **Buzón Compartido (Shared Mailbox)**. Posteriormente, se delegan permisos de `Acceso Completo (Full Access)` al supervisor mediante su propia identidad corporativa. El recurso se monta automáticamente en el cliente Outlook del jefe directo, garantizando la auditoría y la seguridad del proceso.
+

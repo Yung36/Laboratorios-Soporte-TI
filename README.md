@@ -14,6 +14,7 @@ Para ver la documentación completa y las evidencias de cada laboratorio, selecc
 * 🌿 **Rama: `lab-03-active-directory`** -> Gestión de Identidades y Accesos (Desbloqueo de cuentas, creación de usuarios y baja de personal en Active Directory).
 * 🌿 **Rama: `lab-04-gestion-tickets`** -> Gestión de Incidentes e ITIL (Clasificación de impacto y urgencia, administración de colas en Jira/ServiceNow y cumplimiento de SLAs corporativos).
 - 🌿 **Rama: `lab-05-diagnostico-noc`** -> Herramientas de Diagnóstico de Redes Avanzadas para el NOC (Análisis de saltos internacionales mediante `tracert`, cálculo e interpretación de latencia WAN y gobernanza ICMP).
+- 🌿 **Rama: `lab-06-virtualizacion-ad`** -> Virtualización e Infraestructura de Servidores (Despliegue de Windows Server 2022 en VirtualBox, configuración de recursos de cómputo, instalación de Guest Additions y promoción de Controlador de Dominio bajo el bosque `viquez-ops.corp`).
 
 
 ---

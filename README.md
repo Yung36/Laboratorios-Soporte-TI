@@ -13,6 +13,7 @@ Para ver la documentación completa y las evidencias de cada laboratorio, selecc
 * 🌿 **Rama: `lab-02-outlook`** -> Soporte de Microinformática (Resolución de errores de perfiles congelados `.OST`, archivado local `.PST` y gestión de sesiones de Microsoft 365).
 * 🌿 **Rama: `lab-03-active-directory`** -> Gestión de Identidades y Accesos (Desbloqueo de cuentas, creación de usuarios y baja de personal en Active Directory).
 * 🌿 **Rama: `lab-04-gestion-tickets`** -> Gestión de Incidentes e ITIL (Clasificación de impacto y urgencia, administración de colas en Jira/ServiceNow y cumplimiento de SLAs corporativos).
+- 🌿 **Rama: `lab-05-diagnostico-noc`** -> Herramientas de Diagnóstico de Redes Avanzadas para el NOC (Análisis de saltos internacionales mediante `tracert`, cálculo e interpretación de latencia WAN y gobernanza ICMP).
 
 
 ---

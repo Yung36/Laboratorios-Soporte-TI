@@ -19,6 +19,26 @@ Tras concluir la carga del sistema operativo perimetral, se procedió a elevar l
 3. **Bautizo del Espacio de Nombres Global:** Implementación del dominio local independiente bajo la nomenclatura corporativa: **`viquez-ops.corp`**.
 4. **Auditoría de Requisitos Previos:** Ejecución del motor de validación interno de Microsoft, obteniendo aprobación técnica total (Barra Verde) para la inyección de bloques lógicos en el sistema de producción.
 
+
+---
+
+## 📋 Laboratorio 6.2: Operaciones de Identidades en Producción (Onboarding & Offboarding)
+**Objetivo:** Gestionar de forma práctica el ciclo de vida de los colaboradores en la consola de Usuarios y Equipos de Active Directory, ejecutando aprovisionamientos dinámicos por clonación y bloqueos preventivos de seguridad.
+
+### 🛠️ Procedimiento Operativo Ejecutado:
+1. **Segmentación Organizacional:** Creación de la Unidad Organizativa (OU) `CONTABILIDAD` bajo la raíz del dominio para aplicar políticas de grupo (GPOs) controladas.
+2. **Aprovisionamiento Base:** Configuración manual del usuario raíz `Carlos Mora` aplicando políticas de complejidad de credenciales.
+3. **Clonación de Identidades (Onboarding):** Implementación de la directiva `Copiar (Copy)` sobre el perfil de Carlos Mora para dar de alta de forma automatizada a la analista de reingreso `Ana Thompson`, heredando su estructura organizacional de manera íntegra en menos de 5 segundos.
+4. **Protocolo de Mitigación de Riesgos (Offboarding):** Ante una solicitud de cese de funciones, se aplicó la directiva `Deshabilitar cuenta` sobre el colaborador Carlos Mora. El sistema inyectó en caliente la marca de seguridad (Flechita negra hacia abajo) en el objeto de Active Directory, revocando todos los tokens de acceso locales y remotos de forma inmediata.
+
+---
+
+## 📸 Evidencia de Operaciones de Identidad (Active Directory Console)
+A continuación se documenta la consola activa de mi servidor perimetral donde se constata la creación exitosa del departamento, el alta de la analista y la cuenta del ex-empleado congelada por políticas de ciberseguridad:
+
+![Evidencia de Usuarios AD](usuarios_ad.png)
+
+
 ---
 
 ## 📸 Evidencia del Laboratorio (Auditoría de Requisitos Previos de Microsoft)
